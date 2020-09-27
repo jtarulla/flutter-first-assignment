@@ -4,7 +4,7 @@
 // 3) Split the app into three widgets: App, TextControl & Text
 import 'package:flutter/material.dart';
 
-import 'textDisplayed.dart';
+import 'text_displayed.dart';
 
 void main() => runApp(Assignment());
 
@@ -39,20 +39,21 @@ class _AssignmentState extends State<Assignment> {
             appBar: AppBar(
               title: Text('First Assignment'),
             ),
-            body: _textIndex < _textList.length
-                ? (TextDisplayed(_textList, _textIndex, _changeText))
-                : Container(
-                    width: double.infinity,
-                    margin: EdgeInsets.all(50),
-                    child: Text(
-                      'We have no more stuff to show you. Sorry.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.amberAccent,
-                          backgroundColor: Colors.black,
-                          fontFamily: 'Arial',
-                          fontSize: 40),
-                    ),
-                  )));
+            body: Center(
+                child: _textIndex < _textList.length
+                    ? (TextDisplayed(_textList, _textIndex, _changeText))
+                    : Container(
+                        width: double.infinity,
+                        margin: EdgeInsets.all(50),
+                        child: Text(
+                          'We have no more stuff to show you. Sorry.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.amberAccent,
+                              backgroundColor: Colors.black,
+                              fontFamily: 'Arial',
+                              fontSize: 40),
+                        ),
+                      ))));
   }
 }

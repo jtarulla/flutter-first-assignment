@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'textControl.dart';
+import 'text_control.dart';
 
 class TextDisplayed extends StatelessWidget {
   final List<String> displayedText;
